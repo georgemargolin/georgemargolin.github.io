@@ -1124,6 +1124,13 @@ h3.text-center {
 .team-img {
     position: relative;
 }
+.team-row {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px dashed #646464;
+    margin-bottom: 20px;
+}
+
 .team-row p {
     color: #646464;
     line-height: 26px;
