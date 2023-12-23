@@ -549,6 +549,7 @@ a.navbar-brand span {
     width: 42px;
 }
 .callbacks_nav.next {
+    display: none;
     left: auto;
     background: url(../images/left.png) no-repeat 9px 9px  #000;
     right: 47.2%;
@@ -557,6 +558,7 @@ a.navbar-brand span {
     background-color: #da9d40;
 }
 .callbacks_nav.prev {
+    display: none;
     left: auto;
     background: url(../images/right.png) no-repeat 9px 9px #000;
     left: 47.2%;
