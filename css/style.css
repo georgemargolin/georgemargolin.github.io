@@ -2569,3 +2569,8 @@ ul.tweet-agile li p.tweet-p1 a {
 	
 }
 /*-- Responsive Design --*/
+
+.email-invalid {
+    display: none;
+    color: red;
+}

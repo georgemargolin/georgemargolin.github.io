@@ -49,7 +49,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<!-- TODO put translation tab and music tab -->
+			<!-- todo eugene v2: put translation tab -->
+			<!-- todo eugene v2: put music tab, dynamic based on trip -->
 		</div>
 		<!--
 		<div class="top-nav-text">
@@ -140,9 +141,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<h3>Welcome to our family!</h3>
 			<h4>Currently, we are 3 Margolins, 5 Rotaches, and 1 Sokolov</h4>
 			<p>Our family hails from Saint Petersburg, Russia and moved to New York City. Our first wave of immigrants came in August of 1995. {todo: add more text}</p>
-			<p>We currently reside in different parts of New Jersey. {todo: add more text}</p>
+			<p>We currently reside in different parts of New Jersey. We enjoy family gatherings, discussing business ideas, and "constructive" criticism. {todo: add more text}</p>
 			<ul>
-				<!-- todo add page for family tree -->
+				<!-- todo george v2: add page for family tree -->
 				<li><a href="#team" class="w3l scroll">Family Tree</a></li>
 			</ul>
 		</div>
@@ -172,7 +173,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 				<div class="team-agile">
 					<h4>Valentina</h4>
-					<p>{todo: add text}</p>
+					<p>Commander in Chief</p>
 				</div>
 			</div>
 			<div class="clearfix"> </div>
@@ -411,7 +412,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	</div>
 	<div>
 		<div class="team-row">
-			<!-- todo - add view all trips page -->
+			<!-- todo eugene/tahir v1: add all trips page -->
+			<!-- todo eugene/tahir v1: child trip modal -->
 			<input type="submit" value="View All Trips (wip)">
 		</div>
 	</div>
@@ -424,13 +426,26 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<h3 class="heading">Contact Us</h3>
 		<div class="contact-agileinfo">
 			<div class="col-md-7 contact-right"> 
-				<form action="#" method="post">  
-					<input type="text" name="Name" placeholder="Name" required="">
-					<input type="email" class="email" name="Email" placeholder="Email" required="">
-					<input type="text" name="Phone no" placeholder="Phone" required="">
-					<textarea name="Message" placeholder="Message" required=""></textarea>
-					<!-- todo implement contact form <input type="submit" value="SUBMIT" >  -->
+				<form id="gform" method="POST"
+                action="https://script.google.com/macros/s/url/exec">
+					<div class="col-sm-12 form-group">
+						<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+					</div>
+					<div class="col-sm-12 form-group">
+						<div id="email-invalid-message" class="email-invalid">
+							Please enter a valid email!
+						</div>
+						<input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+					</div>
+					<div class="col-sm-12 form-group">
+						<textarea class="form-control" id="comments" name="comments" placeholder="Message" rows="5"></textarea><br>
+					</div>
+					<button class="btn btn-default btn-lg" type="submit">Send <span class="glyphicon glyphicon-menu-right"></span></button>
 				</form>
+				<div style="display:none;" id="thankyou_message">
+				<h2>Thanks for contacting us! <br>
+				  We will get back to you soon!</h2>
+				</div>
 			</div>
 			<div class="col-md-5 contact-left">
 				<div class="address">
@@ -453,7 +468,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <section class="agileits-w3layouts-map">
 	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3035.840729826542!2d-74.27171308756289!3d40.45666197859065!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3cb98b7c00d93%3A0xe7745914ebf3144c!2sSpinnaker%20Pointe%20Clubhouse!5e0!3m2!1sen!2svi!4v1703189027589!5m2!1sen!2svi" allowfullscreen></iframe>
 
-<!-- todo add page visitor js -->
+<!-- todo george v2: add page visitor js -->
 
 </section>
 <!-- //contact -->	
@@ -584,6 +599,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		});
 		</script>
 	<!-- //script for fonts -->
+
+	<script data-cfasync="false" src="js/form-submission-handler.js"></script>
 
 <!-- //js-scripts -->
 </body>
