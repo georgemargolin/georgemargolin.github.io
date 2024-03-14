@@ -1,9 +1,20 @@
 {
   {
-    "title": "test1",
-    "subtext": "",
+    "title": "London",
+    "subtext": "this is example text for London",
     "slideshow": "https://photos.app.goo.gl/MZC5VDwaAi8wTkh97",
-    "subpages": {}
+    "subpages": [
+      {
+      "title": "London subpage 1",
+      "subtext": "this is another sub page",
+      "slideshow": "https://photos.app.goo.gl/MZC5VDwaAi8wTkh97"
+      },
+      {
+      "title": "London subpage 2",
+      "subtext": "this is another sub page",
+      "slideshow": "https://photos.app.goo.gl/MZC5VDwaAi8wTkh97"
+      },
+    ]
   },
   {
     "title": "Yura 75th birthday",
